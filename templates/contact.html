@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+            <!-- Begin contact section -->
+			<section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/map-bg.jpg);">
+            <div class="cover"></div>
+
+                 <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <h2 style="margin-top: 50px;">Contacts</h2>
+                            <div class="devider"></div>
+                            <p class="subtitle">All to contact us</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End page header-->
+
+                <div class="contact wow bounceInRight" data-wow-delay="0.4s">
+                    <div class="container">
+                    	<div class="row">
+
+                            <div class="col-sm-6">
+                                <div class="contact-info">
+                                    <h4>Our Address</h4>
+                                    <ul class="contact-address">
+			                            <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; A-6/503, Kalpak Estate,<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Antophill, Wadala East,<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mumbai City,Mumbai- 400037.</li>
+			                            <li><i class="fa fa-phone"></i>&nbsp; +91 89760 22085</li>
+			                            <li><i class="fa fa-envelope"></i> ujwaljain2000@gmail.com</li>
+			                            <li><i class="fa fa-skype"></i> ujwaljain2000</li>
+			                        </ul>
+                                </div>
+                            </div>
+
+                        	<div class="col-sm-6">
+                                <div class="contact-form">
+                                	<h4>Write to us</h4>
+                                    <form method="post" action="/contact">
+                                    {% csrf_token %}
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-lg" name="name" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control input-lg" name="email" placeholder="E-mail" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="phone" class="form-control input-lg" name="phone" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control input-lg" rows="5" name="desc" placeholder="Message" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+                </div>
+            </section>
+            <!-- End contact section -->
+
+
+
+{% endblock body %}
